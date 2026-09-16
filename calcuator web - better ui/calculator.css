@@ -1,0 +1,39 @@
+*{
+    font-size: large;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 30vh;
+}
+.choose{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    height: 80%;
+    box-sizing: border-box;
+}
+.operator{
+    background-color: rgb(223, 186, 0);
+    
+}
+.calc{
+    width: 20vw;
+    height: 45vh;
+    overflow: hidden;
+    border: 2px solid black;
+}
+#result{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 20%;
+    text-align: right;
+    padding-right: 5px;
+    background-color: grey;
+    border: none;
+    border-bottom: 1px solid black;
+}
+

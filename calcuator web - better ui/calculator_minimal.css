@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eef2ef;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.calc {
+    width: min(360px, 92vw);
+    padding: 18px;
+    background: #ffffff;
+    border: 1px solid #e1e7e3;
+    border-radius: 28px;
+    box-shadow: 0 18px 50px rgba(55, 70, 62, 0.12);
+}
+
+/* Display */
+#result {
+    width: 100%;
+    height: 105px;
+    margin-bottom: 16px;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background: #f3f6f4;
+    color: #33423a;
+    font-size: 38px;
+    font-weight: 500;
+    text-align: right;
+    box-shadow: inset 0 1px 3px rgba(55, 70, 62, 0.04);
+}
+
+/* Button grid */
+.choose {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* All buttons */
+.choose button {
+    height: 62px;
+    border: none;
+    border-radius: 17px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.choose button:hover {
+    transform: translateY(-2px);
+}
+
+.choose button:active {
+    transform: scale(0.95);
+}
+
+/* Number buttons */
+.num {
+    background: #f1f4f2;
+    color: #3d4b43;
+}
+
+.num:hover {
+    background: #e8eeea;
+    box-shadow: 0 5px 12px rgba(55, 70, 62, 0.08);
+}
+
+/* Operators */
+.operator {
+    background: #dfe9e2;
+    color: #4e6758;
+}
+
+.operator:hover {
+    background: #d2e1d8;
+    box-shadow: 0 5px 12px rgba(55, 70, 62, 0.09);
+}
+
+/* Equals button */
+.choose button:last-child {
+    background: #8eaa99;
+    color: #ffffff;
+}
+
+.choose button:last-child:hover {
+    background: #7f9d8c;
+    box-shadow: 0 6px 16px rgba(91, 119, 103, 0.2);
+}
+
+/* AC button */
+.choose button:first-child {
+    background: #f1e7e5;
+    color: #8b625b;
+}
+
+.choose button:first-child:hover {
+    background: #eadbd8;
+}
+
+/* Backspace */
+.choose .num:nth-child(19) {
+    color: #697970;
+}
+
+/* Mobile */
+@media (max-width: 420px) {
+    .calc {
+        padding: 14px;
+        border-radius: 24px;
+    }
+
+    #result {
+        height: 95px;
+        font-size: 32px;
+        padding: 17px;
+    }
+
+    .choose {
+        gap: 8px;
+    }
+
+    .choose button {
+        height: 58px;
+        border-radius: 15px;
+        font-size: 19px;
+    }
+}
